@@ -12,8 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -110,21 +108,7 @@ fun EditNumberField(
     )
 }
 
-@Composable
-fun RoundTheTipRow(modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .size(48.dp),
-        verticalAlignment = Alignment.CenterVertically
-                Text(text = stringResource(R.string.round_up_tip))
-                Switch(
-                    checked = roundUp,
-                    onCheckedChange = onRoundUpChanged,
-                )
-    ) {
-    }
-}
+
 
 /**
  * Calculates the tip based on the user input and format the tip amount
